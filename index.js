@@ -26,7 +26,7 @@ function createHeart() {
 
 // Generate multiple hearts and add them to the container
 const heartContainer = document.querySelector('.heart-container');
-for (let i = 0; i < 6; i++) { // Adjust the number of hearts here
+for (let i = 0; i < 4; i++) { // Adjust the number of hearts here
     const heart = createHeart();
     heartContainer.appendChild(heart);
 }
@@ -36,4 +36,10 @@ document.querySelectorAll('.heart').forEach(heart => {
     heart.addEventListener('animationiteration', () => {
         heart.style.left = (25 + Math.random() * 50) + 'vw';
     });
+});
+
+document.addEventListener('click', function() {
+    var audio = document.getElementById('background-music');
+    audio.muted = false;
+    audio.play();
 });

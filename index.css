@@ -53,8 +53,18 @@ body {
 }
 
 .flowers {
-  position: relative;
-  transform: scale(0.7);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  bottom: -10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .flowers-container{
+    position: relative;
+    transform: scale(0.7);
+  }
 }
 
 .flower {
@@ -1017,20 +1027,25 @@ html {
 }
 
 #title {
+    width: 80%;
+    border-top: #d4d4d431 1px solid;
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
     color: #fff;
     text-align: center;
     font-family: myfont;
     font-weight: 300;
-    font-size: 28px;
-    letter-spacing: 10px;
-    margin-top: -20%;
-    padding-left: 10px;
+    font-size: 1em;
+    letter-spacing: 6px;
+    margin-top: 10%;
     opacity: 0; /* Start invisible */
     animation: fadeIn 4s forwards; /* Fade-in effect */
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes fadeIn {
@@ -1044,11 +1059,7 @@ html {
     }
 }
 
-#title span {
-    background: -webkit-linear-gradient(white, #38495a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 #stars {
     width: 1px;
@@ -1690,14 +1701,14 @@ html {
 /* Heart movement */
 @keyframes moveUp {
     0% {
-        transform: translateY(100vh); /* Start below the viewport */
+        transform: translateY(calc(100vh - 10em)); /* Start below the viewport */
         opacity: 0; /* Start invisible */
     }
     25% {
         opacity: 0.5; /* Fade in */
     }
     50% {
-        transform: translateY(calc(70vh)) rotate(-45deg); /* Move to 60% of the viewport height */
+        transform: translateY(calc(70vh - 5em)) rotate(-45deg); /* Move to 60% of the viewport height */
         opacity: 1; /* Fully visible */
     }
     75% {
