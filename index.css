@@ -1027,6 +1027,7 @@ html {
 }
 
 #title {
+  padding-top: 1em;
     width: 80%;
     border-top: #d4d4d431 1px solid;
     position: absolute;
@@ -1036,7 +1037,7 @@ html {
     font-family: myfont;
     font-weight: 300;
     font-size: .8em;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     margin-top: 10%;
     opacity: 0; /* Start invisible */
     animation: fadeIn 4s forwards; /* Fade-in effect */
