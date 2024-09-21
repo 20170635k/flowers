@@ -1035,7 +1035,7 @@ html {
     text-align: center;
     font-family: myfont;
     font-weight: 300;
-    font-size: 1em;
+    font-size: .8em;
     letter-spacing: 6px;
     margin-top: 10%;
     opacity: 0; /* Start invisible */
